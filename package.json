@@ -1,0 +1,37 @@
+{
+  "name": "k8s-deployment-poc-app",
+  "version": "1.0.0",
+  "description": "K8S POC App",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --ext .js --fix",
+    "prepare": "cd ../ && husky install ./javascript/.husky",
+    "start": "node index.js"
+  },
+  "lint-staged": {
+    "*.js": "eslint . --ext .js --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "body-parser": "^1.20.1",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-joi-validate": "^3.0.1",
+    "helmet": "^6.0.1",
+    "morgan": "^1.10.0",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.0",
+    "husky": "^8.0.2",
+    "jest": "^27.5.1",
+    "lint-staged": "^13.1.0",
+    "supertest": "^6.3.3"
+  }
+}
